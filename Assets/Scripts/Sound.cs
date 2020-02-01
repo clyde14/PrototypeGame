@@ -6,12 +6,15 @@ public class Sound : MonoBehaviour
 {
 
     private bool entered = false;
-    void OnTriggerEnter2D(Collider2D Other) {
+    public GameObject setObj;
+    void OnTriggerEnter2D(Collider2D other) {
 
-        if (!entered)
+        if (!entered && other.name == setObj.name)
         {
+           
             GetComponent<AudioSource>().Play();
             entered = true;
+
         }
     }
     
