@@ -8,13 +8,19 @@ public class HorizontalSliding : MonoBehaviour
     public float moveSpeed = 3f;
     public float horizontalDistance = 4f;
     public bool moveRight = false;
+    private float initialPos;
+
+    void Start()
+    {
+        initialPos = transform.position.x;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x > horizontalDistance)
+        if (transform.position.x - initialPos > horizontalDistance)
             moveRight = false;
-        if (transform.position.x < -horizontalDistance)
+        if (transform.position.x - initialPos < -horizontalDistance)
             moveRight = true;
 
         if (moveRight)

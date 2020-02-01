@@ -279,7 +279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985876882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.66, y: 12.72, z: 0}
+  m_LocalPosition: {x: -9, y: 5, z: 0}
   m_LocalScale: {x: 0.3, y: 0.065, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 1793869197}
   - component: {fileID: 1793869200}
   - component: {fileID: 1793869199}
+  - component: {fileID: 1793869201}
   m_Layer: 9
   m_Name: Weighted_Tile
   m_TagString: Untagged
@@ -562,7 +563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793869196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.52, y: 3.03, z: 0}
+  m_LocalPosition: {x: 9.5, y: 6.4, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -602,7 +603,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793869196}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -615,6 +616,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 5
+--- !u!114 &1793869201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793869196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d34557c2a1a2c4fb1da4caeea7765f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
 --- !u!1 &1885008900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5874009934540958425, guid: 61b1e8190468007449eb96542e7de2c2,
@@ -698,6 +712,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2032910857921952245, guid: 0b1b71427c55a974e9577aa247432213,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2032910857921952245, guid: 0b1b71427c55a974e9577aa247432213,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: fd04eef27f6608d42be761a6f4abb91c, type: 2}
     - target: {fileID: 2032910857921952249, guid: 0b1b71427c55a974e9577aa247432213,
         type: 3}
       propertyPath: m_Name
@@ -798,7 +822,7 @@ PrefabInstance:
     - target: {fileID: 5874009934540958428, guid: 61b1e8190468007449eb96542e7de2c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.74
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5874009934540958428, guid: 61b1e8190468007449eb96542e7de2c2,
         type: 3}
