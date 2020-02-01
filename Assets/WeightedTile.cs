@@ -6,7 +6,7 @@ public class WeightedTile : MonoBehaviour
 {
 
     private float initialPos;
-    public float moveSpeed = 2f;
+    public float moveSpeed;
     private bool rise = true;
     private Rigidbody2D rb;
 
@@ -26,23 +26,25 @@ public class WeightedTile : MonoBehaviour
         }
     }
 
-    void OnCollisionStay2D()
-    {
-        Debug.Log("entered");
-        rise = false;
-        rb.isKinematic = false;
-
-    }
-
-    void OnCollisonExit2D(Collision2D collider)
+    void OnCollisionStay2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "Player")
         {
-            Debug.Log("exited");
-            rise = true;
-            rb.isKinematic = true;
+            Debug.Log("entered");
+            rise = false;
+            rb.isKinematic = false;
         }
+        
     }
 
+    void OnCollisionExit2D(Collision2D collider)
+    {
+        if(collider.gameObject.tag == "Player")
+        {
+            Debug.Log("exited");
+            rise = true;
 
+        }
+    }
 }
+

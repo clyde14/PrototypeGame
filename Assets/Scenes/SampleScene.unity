@@ -199,6 +199,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile_Standin
       objectReference: {fileID: 0}
+    - target: {fileID: 6820439779453856665, guid: f07b5408588518947b94b4da14bfdebd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891890176050231698, guid: f07b5408588518947b94b4da14bfdebd,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f07b5408588518947b94b4da14bfdebd, type: 3}
 --- !u!1 &985876882
@@ -563,7 +573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793869196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.5, y: 6.4, z: 0}
+  m_LocalPosition: {x: 9.5, y: 5.48, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -605,7 +615,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1793869196}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -628,7 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d34557c2a1a2c4fb1da4caeea7765f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 4
 --- !u!1 &1885008900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5874009934540958425, guid: 61b1e8190468007449eb96542e7de2c2,
