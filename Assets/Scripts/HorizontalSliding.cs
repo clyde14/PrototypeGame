@@ -2,27 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sliding : MonoBehaviour
+public class HorizontalSliding : MonoBehaviour
 {
 
     public float moveSpeed = 3f;
-    public float moveDistance = 4f;
-    public bool moveRight = true;
+    public float horizontalDistance = 4f;
+    public bool moveRight = false;
 
     // Update is called once per frame
-    void Update() {
-        if (transform.position.x > moveDistance)
+    void Update()
+    {
+        if (transform.position.x > horizontalDistance)
             moveRight = false;
-        if (transform.position.x < -moveDistance)
+        if (transform.position.x < -horizontalDistance)
             moveRight = true;
 
         if (moveRight)
             transform.position = new Vector2(transform.position.x + moveSpeed * Time.deltaTime, transform.position.y);
         else
             transform.position = new Vector2(transform.position.x - moveSpeed * Time.deltaTime, transform.position.y);
+
     }
 
-    void OnCollisionEnter2D (Collision2D col) {
+
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
 
         col.transform.parent = this.transform;
     }
@@ -33,3 +38,4 @@ public class Sliding : MonoBehaviour
         col.transform.parent = null;
     }
 }
+
