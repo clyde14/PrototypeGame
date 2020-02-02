@@ -5,15 +5,15 @@ using UnityEngine;
 public class IntroStart : MonoBehaviour
 {
     // Start is called before the first frame update
-    GameObject player;
     AudioSource audioData;
+    GameObject finish;
 
     void Start()
     {
-        player = GameObject.Find("Player");
-        player.GetComponent<PlayerMovement>().canMove = false;
+        finish = GameObject.Find("Finish");
+        finish.SetActive(false);
         audioData = GetComponent<AudioSource>();
-        FindObjectOfType<AudioManager>().Play("IntroDialogue");
+        audioData.Play();
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class IntroStart : MonoBehaviour
     {
         if (!audioData.isPlaying)
         {
-            player.GetComponent<PlayerMovement>().canMove = true;
+            finish.SetActive(true);
         }
     }
 }
