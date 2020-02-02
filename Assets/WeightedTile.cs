@@ -7,6 +7,7 @@ public class WeightedTile : MonoBehaviour
 
     private float initialPos;
     public float moveSpeed;
+    public float force;
     private bool rise = true;
     private Rigidbody2D rb;
 
@@ -21,9 +22,15 @@ public class WeightedTile : MonoBehaviour
     void Update()
     {
         if (rise && transform.position.y < initialPos) {
-            Debug.Log("rising");
-            transform.position = new Vector2(transform.position.x, transform.position.y + moveSpeed * Time.deltaTime);
+            Debug.Log(rise);
+            //transform.position = new Vector2(transform.position.x, transform.position.y + moveSpeed * Time.deltaTime);
+            rb.AddForce(transform.up * force);
         }
+        if (transform.position.y >= initialPos)
+        {
+            rb.Sleep();
+        }
+
     }
 
     void OnCollisionStay2D(Collision2D collider)
@@ -31,6 +38,8 @@ public class WeightedTile : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             Debug.Log("entered");
+            Debug.Log(rise);
+           
             rise = false;
             rb.isKinematic = false;
         }
@@ -42,8 +51,9 @@ public class WeightedTile : MonoBehaviour
         if(collider.gameObject.tag == "Player")
         {
             Debug.Log("exited");
+            Debug.Log(rise);
+            
             rise = true;
-
         }
     }
 }
