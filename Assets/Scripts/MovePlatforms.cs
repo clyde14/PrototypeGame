@@ -8,6 +8,15 @@ public class MovePlatforms : MonoBehaviour
     private float startPosY;
     private bool isBeingHeld = false;
     public BoxCollider2D toggleBox;
+
+    private void Start()
+    {
+        if (toggleBox == null)
+        {
+            toggleBox = GetComponent<BoxCollider2D>();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
