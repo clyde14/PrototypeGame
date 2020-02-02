@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelOne : MonoBehaviour
-{
+
+public class TriggerSound : MonoBehaviour
+{ 
 
     private bool entered = false;
     public GameObject setObj;

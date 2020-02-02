@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerSound : MonoBehaviour
+public class LevelOne : MonoBehaviour
 {
 
     private bool entered = false;
