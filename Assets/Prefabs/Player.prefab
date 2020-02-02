@@ -237,6 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 4312304946839764945}
   runSpeed: 40
+  canMove: 1
 --- !u!1 &4312304947196403577
 GameObject:
   m_ObjectHideFlags: 0

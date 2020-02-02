@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - DragTile
+  - Objective
   layers:
   - Default
   - TransparentFX

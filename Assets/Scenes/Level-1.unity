@@ -2252,6 +2252,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 15c75ce63e7c95d49b8b538fb5b28fb7, type: 3}
     volume: 0.2
     pitch: 0.7
+    loop: 1
+    source: {fileID: 0}
+  - name: IdleSong
+    clip: {fileID: 8300000, guid: d1dbeb9c561edee47a44cc7137f2cba1, type: 3}
+    volume: 0.2
+    pitch: 0.7
     loop: 0
     source: {fileID: 0}
   - name: IntroDialogue
@@ -5718,8 +5724,8 @@ Transform:
   - {fileID: 1691511844}
   - {fileID: 414418416}
   - {fileID: 196384945}
-  - {fileID: 2094886593}
   - {fileID: 1927173471}
+  - {fileID: 2094886593}
   m_Father: {fileID: 1982011604}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7531,7 +7537,7 @@ PrefabInstance:
     - target: {fileID: 3526185878635533331, guid: 576e20ead2fba984aa7181b6d106b9a0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3526185878635533331, guid: 576e20ead2fba984aa7181b6d106b9a0,
         type: 3}
@@ -7975,7 +7981,7 @@ GameObject:
   - component: {fileID: 2094886594}
   m_Layer: 9
   m_Name: Tile_EndGoal
-  m_TagString: Untagged
+  m_TagString: Objective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7992,7 +7998,7 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1407018948}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &2094886594
 BoxCollider2D:
