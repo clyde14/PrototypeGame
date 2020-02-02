@@ -8,6 +8,7 @@ public class MovePlatforms : MonoBehaviour
     private float startPosY;
     private bool isBeingHeld = false;
     public BoxCollider2D toggleBox;
+   
 
     private void Start()
     {
