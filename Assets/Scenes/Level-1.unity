@@ -2079,7 +2079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &364831765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2605,8 +2605,8 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Theme
-    clip: {fileID: 8300000, guid: 15c75ce63e7c95d49b8b538fb5b28fb7, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: 1c10b7da50e1c6f4ab7e00d1782394b9, type: 3}
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -4196,12 +4196,12 @@ PrefabInstance:
     - target: {fileID: 4312304946839764947, guid: fca8204b41a119c46843568f34785265,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.85
+      value: -8.5
       objectReference: {fileID: 0}
     - target: {fileID: 4312304946839764947, guid: fca8204b41a119c46843568f34785265,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.05
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 4312304946839764950, guid: fca8204b41a119c46843568f34785265,
         type: 3}
@@ -5816,7 +5816,7 @@ Transform:
   - {fileID: 1604440963}
   - {fileID: 1513038242}
   m_Father: {fileID: 1407018948}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1227587306
 PrefabInstance:
@@ -6348,8 +6348,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1197592892884477948}
-  - {fileID: 1226711760}
   - {fileID: 1869830975}
+  - {fileID: 1226711760}
   - {fileID: 1593191595}
   - {fileID: 138689286}
   - {fileID: 1501697173}
