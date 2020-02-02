@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TriggerVoice : MonoBehaviour
 {
+    public AudioSource clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class TriggerVoice : MonoBehaviour
     }
     public void play()
     {
-        GetComponent<AudioSource>().Play();
+        clip.Play();
     }
         
     
