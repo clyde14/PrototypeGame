@@ -173,13 +173,15 @@ MonoBehaviour:
   sounds:
   - name: PlayerWalk
     clip: {fileID: 8300000, guid: b09adc8515feac246b2e126582c3920c, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: PlayerJump
     clip: {fileID: 8300000, guid: 3462d5612eec80140ba04fd7c1bec216, type: 3}
     volume: 0.2
     pitch: 0.7
+    loop: 0
     source: {fileID: 0}
 --- !u!1001 &752733078
 PrefabInstance:
