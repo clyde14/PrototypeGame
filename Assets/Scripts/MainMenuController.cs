@@ -19,7 +19,7 @@ public class MainMenuController : MonoBehaviour
     public void intro()
     {
         Debug.Log("I got to intro!");
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Intro");
     }
     public void exit()
     {

@@ -9,7 +9,7 @@ public class LevelControl : MonoBehaviour
 {
     public int index;
     bool entered = false;
-    //public string levelName;
+    public string levelName;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,6 +27,6 @@ public class LevelControl : MonoBehaviour
     IEnumerator WaitToLoad()
     {
         yield return new WaitForSeconds(2.8f);
-        SceneManager.LoadScene(index);
+        SceneManager.LoadScene(levelName);
     }
 }
