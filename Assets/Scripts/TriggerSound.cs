@@ -8,15 +8,40 @@ public class TriggerSound : MonoBehaviour
 
     private bool entered = false;
     public GameObject setObj;
-    void OnTriggerEnter2D(Collider2D other) {
+    AudioSource audioData;
+
+    void Start()
+    {
+        audioData = GetComponent<AudioSource>();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+
+        audioData = GetComponent<AudioSource>();
 
         if (!entered && other.name == setObj.name)
         {
-           
-            GetComponent<AudioSource>().Play();
+            audioData.Play();
             entered = true;
 
         }
+        
     }
-    
+
+
+    void Update()
+    {
+        if(audioData.isPlaying)
+        {
+            Debug.Log("Pause Game");
+            Time.timeScale = 0f;
+        } else if (entered && !audioData.isPlaying){
+            Time.timeScale = 1f;
+            Destroy(gameObject);
+        }
+    }
 }
+
+
+
