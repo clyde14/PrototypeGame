@@ -12,6 +12,7 @@ public class StartLevel1 : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        player.GetComponent<PlayerMovement>().canMove = false;
         audioData = GetComponent<AudioSource>();
         FindObjectOfType<AudioManager>().Play("Theme");
     }

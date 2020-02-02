@@ -8,7 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
 
     public float runSpeed = 40f;
-    public bool canMove = false;
+    public bool canMove = true;
+   // public int startIdle = 100;
+   // private int time = 0;
 
     float horizontalMove = 0f;
     bool jump = false;
@@ -44,5 +46,18 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
             jump = false;
         }
+
+        //check for idle
+
+        /*if(!Input.anyKey) {
+            time++;
+        }
+        else {
+            time = 0;
+        }
+        if(time == startIdle)
+        {
+            
+        }*/
     }
 }
